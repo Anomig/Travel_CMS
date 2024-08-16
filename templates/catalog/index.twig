@@ -1,0 +1,30 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+    <h1>Catalog</h1>
+
+    <div class="catalog-items">
+        {% set query = craft.entries.section('catalog') %}
+
+        {% set entries = query.orderBy('postDate desc').all() %}
+
+        <div class="catalog-grid">
+            {% for entry in entries %}
+                <div class="catalog-item">
+                    <a href="{{ entry.url }}">
+                        {% set image = entry.image.one() %}
+                        {% if image %}
+                            <img src="{{ image.url }}" alt="{{ entry.title }}">
+                        {% else %}
+                            <img src="/path/to/default-image.jpg" alt="Default Image">
+                        {% endif %}
+                        <h4>{{ entry.title }}</h4>
+                        <p>{{ entry.introduction }}</p>
+                    </a>
+                </div>
+            {% else %}
+                <p>No catalog items available.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

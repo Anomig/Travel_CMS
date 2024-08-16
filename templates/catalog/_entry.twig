@@ -1,0 +1,50 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+    <h1>Catalog</h1>
+
+    <div class="catalog-filters">
+        <form method="get" action="{{ url('catalog') }}">
+            <label for="destinationFilter">Filter by Destination:</label>
+            <select id="destinationFilter" name="destinationFilter">
+                <option value="">Select a destination</option>
+                {% for category in craft.categories.group('destination').all() %}
+                    <option value="{{ category.slug }}" {% if craft.app.request.getQueryParam('destinationFilter') == category.slug %}selected{% endif %}>
+                        {{ category.title }}
+                    </option>
+                {% endfor %}
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <div class="catalog-items">
+        {% set query = craft.entries.section('catalog') %}
+        {% if craft.app.request.getQueryParam('destinationFilter') %}
+            {% set selectedCategory = craft.categories.slug(craft.app.request.getQueryParam('destinationFilter')).one() %}
+            {% if selectedCategory %}
+                {% set query = query.relatedTo(selectedCategory) %}
+            {% endif %}
+        {% endif %}
+        {% set entries = query.orderBy('postDate desc').all() %}
+
+        <ul>
+    {% for entry in entries %}
+        <li>
+            <a href="{{ entry.url }}">
+                {% set image = entry.image.one() %}
+                {% if image %}
+                    <img src="{{ image.url }}" alt="{{ entry.title }}">
+                {% else %}
+                    <img src="/images/travel1.jpg" alt="Default Image"> <!-- Zorg ervoor dat default.jpg bestaat in /images/ -->
+                {% endif %}
+                <h4>{{ entry.title }}</h4>
+                <p>{{ entry.introduction }}</p>
+            </a>
+        </li>
+    {% else %}
+        <p>No catalog items available.</p>
+    {% endfor %}
+</ul>
+    </div>
+{% endblock %}

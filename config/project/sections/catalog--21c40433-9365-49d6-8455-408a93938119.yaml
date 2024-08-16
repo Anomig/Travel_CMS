@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - ad5a8279-6b1b-4566-a5eb-5a0113f65e6d # Catalog
+handle: catalog
+maxAuthors: 1
+name: Catalog
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  d5dcaa38-6d41-4085-8a03-17e1fd117536: # travel
+    enabledByDefault: true
+    hasUrls: true
+    template: catalogus/_entry.twig
+    uriFormat: 'catalogus/{slug}'
+type: channel

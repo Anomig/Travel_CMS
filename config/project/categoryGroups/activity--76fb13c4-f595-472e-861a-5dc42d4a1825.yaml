@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  75e48bbb-74e6-4d52-891d-53d8d814adca:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-15T20:48:28+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: d80c144f-e39d-440e-be1d-204df665c2f2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f879aa75-e34f-42fb-a28b-32af49eb40a7
+        userCondition: null
+handle: activity
+name: Activity
+siteSettings:
+  d5dcaa38-6d41-4085-8a03-17e1fd117536: # travel
+    hasUrls: true
+    template: activity/_category.twig
+    uriFormat: 'activity/{slug}'
+structure:
+  maxLevels: null
+  uid: 3ae87d7b-c507-488a-874b-18cfc34e8d39

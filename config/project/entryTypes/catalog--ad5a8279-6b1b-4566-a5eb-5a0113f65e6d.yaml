@@ -1,0 +1,131 @@
+color: null
+fieldLayouts:
+  6c3c0a20-b8f2-4747-9dc1-ff4f150768fb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-15T20:37:59+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d9a030ab-0e98-43c2-aa7e-c67f78ef1632
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-15T20:53:01+00:00'
+            elementCondition: null
+            fieldUid: 460dbb8b-6d5d-43fe-9f03-00bf99802773 # Categories
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 879c2788-9aff-4a1e-8b3a-fbf502486c80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-15T22:32:09+00:00'
+            elementCondition: null
+            fieldUid: f1521c9c-cf9e-48fe-91bf-1e45493d206f # Categories
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9e7437e9-c2a8-408a-a980-6120348f4d34
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-15T20:39:42+00:00'
+            elementCondition: null
+            fieldUid: 9388ce43-5c4b-4071-b904-538f472df8c1 # Introduction
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb69cab8-817c-4bea-8b2d-6bd71e224348
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-15T20:39:42+00:00'
+            elementCondition: null
+            fieldUid: 8510d64d-58bd-48c5-9156-5961afec6661 # Main Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5746b41a-b91e-42ec-97bf-9530dff4744d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-15T20:39:42+00:00'
+            elementCondition: null
+            fieldUid: 5277367b-946d-401c-9255-b284d69533e1 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9c980ea5-4734-4aaa-b7d7-fc98f1e79416
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 266c5370-94ae-401f-99d3-2cb5f45c0f40
+        userCondition: null
+handle: catalog
+hasTitleField: true
+icon: ''
+name: Catalog
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,15 @@
+<header>
+    <nav>
+    <ul>
+        <li><a href="{{ url('') }}">Home</a></li>
+        <li><a href="{{ url('about') }}">About</a></li>
+        <li><a href="{{ url('blog') }}">Blog</a></li>
+        <li><a href="{{ url('catalog') }}">Catalog</a></li>
+    </ul>
+</nav>
+
+<form method="get" action="{{ url('search') }}">
+    <input type="text" name="q" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+</header>

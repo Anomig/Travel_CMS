@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: mainContent
+instructions: null
+name: 'Main Content'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - 59fdfca2-52b3-45a3-bdde-4dcbc605bc48 # Matrix
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

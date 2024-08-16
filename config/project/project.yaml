@@ -1,0 +1,53 @@
+dateModified: 1723764288
+email:
+  fromEmail: r0677456@student.thomasmore.be
+  fromName: travel
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  defaultImages:
+    hasUrls: true
+    name: 'default images'
+    settings:
+      path: web/images
+    type: craft\fs\Local
+    url: /images/
+meta:
+  __names__:
+    8a86f7fb-b651-4818-9c06-dde95b43d1b6: Destination # Destination
+    21b71fb3-07a1-4c77-8263-01688a4fb4e5: Region # Region
+    21c40433-9365-49d6-8455-408a93938119: Catalog # Catalog
+    050d16de-3c2c-4f16-a63c-24710890cdca: Blog # Blog
+    59fdfca2-52b3-45a3-bdde-4dcbc605bc48: Matrix # Matrix
+    60e6fb54-ebcd-49e0-98bc-8139a715b5db: Blog # Blog
+    76fb13c4-f595-472e-861a-5dc42d4a1825: Activity # Activity
+    343cbd65-07e7-4920-901e-580db18ebe2d: travel # travel
+    423a87c5-f04a-42f8-bef2-d5df70da6ede: Homepage # Homepage
+    460dbb8b-6d5d-43fe-9f03-00bf99802773: Categories # Categories
+    6281a244-a571-4f6f-b5c0-160c462367fa: 'Default Images' # Default Images
+    8510d64d-58bd-48c5-9156-5961afec6661: 'Main Content' # Main Content
+    9388ce43-5c4b-4071-b904-538f472df8c1: Introduction # Introduction
+    12958c82-abf7-4b69-93a6-c2f77ba93f09: About # About
+    384489ac-dd3f-4ed2-a7a6-f604b8f3342a: Destinations # Destinations
+    5277367b-946d-401c-9255-b284d69533e1: Image # Image
+    ad5a8279-6b1b-4566-a5eb-5a0113f65e6d: Catalog # Catalog
+    ae2b5f57-bc92-4f44-a285-28ba5fff207f: Planning # Planning
+    c6d0d95a-f95a-484b-915f-3f6e59dfe4cc: Date # Date
+    d5dcaa38-6d41-4085-8a03-17e1fd117536: travel # travel
+    e0e862f3-eac4-484a-a3e8-672f91c02a09: 'Public Schema' # Public Schema
+    f24d459c-fdd8-471d-a971-b00ab45699db: Homepage # Homepage
+    f1521c9c-cf9e-48fe-91bf-1e45493d206f: Categories # Categories
+    fe6fa0c6-7e7d-4dd2-8983-fec5b454cff5: About # About
+    ff2d4e22-a8b1-417b-8c61-7bf55a1b1c40: Text # Text
+system:
+  edition: solo
+  live: true
+  name: travel
+  schemaVersion: 5.3.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

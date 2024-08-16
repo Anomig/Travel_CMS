@@ -1,0 +1,48 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+    <h1>Blog</h1>
+
+    <div class="blog-filters">
+        <form method="get" action="{{ url('blog') }}">
+            <label for="sortOrder">Sort by date:</label>
+            <select id="sortOrder" name="sortOrder">
+                <option value="desc" {% if craft.app.request.getQueryParam('sortOrder') == 'desc' %}selected{% endif %}>Newest to Oldest</option>
+                <option value="asc" {% if craft.app.request.getQueryParam('sortOrder') == 'asc' %}selected{% endif %}>Oldest to Newest</option>
+            </select>
+            <button type="submit">Sort</button>
+        </form>
+    </div>
+
+    <div class="blog-posts">
+        {% set query = craft.entries.section('blog') %}
+        {% if craft.app.request.getQueryParam('sortOrder') %}
+            {% set sortOrder = craft.app.request.getQueryParam('sortOrder') %}
+            {% set entries = query.orderBy('postDate ' ~ sortOrder).all() %}
+        {% else %}
+            {% set entries = query.orderBy('postDate desc').all() %}
+        {% endif %}
+
+        <div class="blog-grid">
+            {% for entry in entries %}
+                <article class="blog-post">
+                    {% set image = entry.image.one() %}
+                    {% if image %}
+    
+        <img src="{{ image.url }}" alt="{{ entry.title }}">
+        {% else %}
+            <p>No image available for this post.</p>
+        {% endif %}
+
+                    <div class="content">
+                        <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+                        <p>{{ entry.introduction | raw }}</p>
+                    </div>
+                    <p>Posted on: {{ entry.postDate | date("F Y") }}</p>
+                </article>
+            {% else %}
+                <p>No blog posts available.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+    <h1>{{ entry.title }}</h1>
+    <div class="blog-post">
+        {% set image = entry.image.one() %}
+        {% if image %}
+            <img src="{{ image.url }}" alt="{{ image.title }}">
+        {% endif %}
+        <div class="content">
+            <h2>{{ entry.title }}</h2>
+            <p>{{ entry.introduction | raw }}</p>
+            <div class="main-content">
+                {% for block in entry.mainContent.all() %}
+                    <p>{{ block.text | raw }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
